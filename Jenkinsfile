@@ -1,7 +1,7 @@
 pipeline {
-    agent any 
+    agent {label "Node"} 
     environment {
-    DOCKERHUB_CREDENTIALS = credentials('dyke30-dockerhub')
+    DOCKERHUB_CREDENTIALS = credentials('docker-hub-dyke30')
     }
     stages { 
         stage('SCM Checkout') {
